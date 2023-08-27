@@ -3,7 +3,7 @@ using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.UnitTests.Entities;
 
-public class UserDomainTests
+public class UserTests
 {
     private readonly Faker<Credential> _credentialFaker = new();
     private readonly Faker<PersonalData> _personalDataFaker = new();
@@ -13,7 +13,7 @@ public class UserDomainTests
     {
         Assert.Throws<ArgumentNullException>(() =>
         {
-            _ = new UserDomain(null!, _personalDataFaker.Generate());
+            _ = new User(null!, _personalDataFaker.Generate());
         });
     }
     
@@ -22,7 +22,7 @@ public class UserDomainTests
     {
         Assert.Throws<ArgumentNullException>(() =>
         {
-            _ = new UserDomain(_credentialFaker.Generate(), null!);
+            _ = new User(_credentialFaker.Generate(), null!);
         });
     }
     
@@ -30,7 +30,7 @@ public class UserDomainTests
     [Fact]
     public void Constructor_WhenArgumentsAreValid_ShouldPass()
     {
-        _ = new UserDomain(_credentialFaker.Generate(), _personalDataFaker.Generate());
+        _ = new User(_credentialFaker.Generate(), _personalDataFaker.Generate());
         Assert.True(true);
     }
 }

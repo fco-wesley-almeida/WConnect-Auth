@@ -6,11 +6,11 @@ namespace WConnect.Auth.UnitTests.Builders;
 
 public class UserDomainBuilderTests
 {
-    private IUserDomainBuilder _sut;
+    private IUserBuilder _sut;
 
     public UserDomainBuilderTests()
     {
-        _sut = new UserDomainBuilder();
+        _sut = new UserBuilder();
     }
     
     [Fact]

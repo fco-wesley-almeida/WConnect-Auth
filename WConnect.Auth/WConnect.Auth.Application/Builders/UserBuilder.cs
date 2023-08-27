@@ -4,31 +4,31 @@ using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Application.Builders;
 
-public class UserDomainBuilder: IUserDomainBuilder
+public class UserBuilder: IUserBuilder
 {
     private string _name = null!;
     private Password _password = null!;
     private Login _login = null!;
     private Uri? _photoUri;
-    public IUserDomainBuilder WithName(string name)
+    public IUserBuilder WithName(string name)
     {
         _name = name;
         return this;
     }
 
-    public IUserDomainBuilder WithPassword(string password)
+    public IUserBuilder WithPassword(string password)
     {
         _password = new(password);
         return this;
     }
 
-    public IUserDomainBuilder WithLogin(string login)
+    public IUserBuilder WithLogin(string login)
     {
         _login = new(login);
         return this;
     }
 
-    public IUserDomainBuilder WithPhotoUrl(string? uri)
+    public IUserBuilder WithPhotoUrl(string? uri)
     {
         if (uri is not null)
         {
@@ -37,7 +37,7 @@ public class UserDomainBuilder: IUserDomainBuilder
         return this;
     }
 
-    public UserDomain Build()
+    public User Build()
     {
         ArgumentNullException.ThrowIfNull(_login);
         ArgumentNullException.ThrowIfNull(_password);

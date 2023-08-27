@@ -1,6 +1,6 @@
 using System.Data;
 using Dapper;
-using WConnect.Auth.Core.DatabaseModels;
+using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Repositories;
 using WConnect.Auth.Domain.ValueObjects;
 
@@ -15,7 +15,7 @@ public class UserRepository: IUserRepository
         _connection = connection;
     }
 
-    public async Task<User?> FindUserByLoginAsync(Login login)
+    public async Task<UserRow?> FindUserByLoginAsync(Login login)
     {
         const string sql = @"
 			SELECT
@@ -34,13 +34,13 @@ public class UserRepository: IUserRepository
 				AND deleted = 0
 			LIMIT 1
         ";
-        return await _connection.QueryFirstOrDefaultAsync<User>(sql, new
+        return await _connection.QueryFirstOrDefaultAsync<UserRow>(sql, new
         {
 	        Login = login.ToString()
         });
     }
 
-    public async Task<int> InsertAsync(User user)
+    public async Task<int> InsertAsync(UserRow userRow)
     {
 	    const string sql = @"
 			INSERT INTO `user`
@@ -65,6 +65,6 @@ public class UserRepository: IUserRepository
 			);
 			select LAST_INSERT_ID();
 		";
-	    return await _connection.ExecuteScalarAsync<int>(sql, user);
+	    return await _connection.ExecuteScalarAsync<int>(sql, userRow);
     }
 }
