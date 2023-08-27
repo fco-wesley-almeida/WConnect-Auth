@@ -7,12 +7,12 @@ using WConnect.Auth.Domain.Entities;
 
 namespace WConnect.Auth.Application.Services;
 
-public class UsersGrpcService: Users.UsersBase
+public class SignUpService: SignUp.SignUpBase
 {
     private readonly IUserRepository _userRepository;
     private readonly IUserDomainBuilder _userDomainBuilder;
 
-    public UsersGrpcService(IUserRepository userRepository, IUserDomainBuilder userDomainBuilder)
+    public SignUpService(IUserRepository userRepository, IUserDomainBuilder userDomainBuilder)
     {
         _userRepository = userRepository;
         _userDomainBuilder = userDomainBuilder;

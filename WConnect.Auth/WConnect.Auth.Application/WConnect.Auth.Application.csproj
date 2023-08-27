@@ -8,7 +8,7 @@
 
     <ItemGroup>
         <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-        <Protobuf Include="Protos\users.proto">
+        <Protobuf Include="Protos\signUp.proto">
           <GrpcServices>Server</GrpcServices>
           <Access>Public</Access>
           <ProtoCompile>True</ProtoCompile>
