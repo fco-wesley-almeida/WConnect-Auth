@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RmNIKc6iD9j3ejHzjW9sI9pp5Xkl+D/DAtp7D1gBzU8=",
+  "Source": "WConnect.Auth.Application",
+  "BasePath": "_content/WConnect.Auth.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

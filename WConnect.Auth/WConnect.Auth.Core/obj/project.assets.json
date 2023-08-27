@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "WConnect.Auth.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/WConnect.Auth.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WConnect.Auth.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WConnect.Auth.Domain/1.0.0": {
+      "type": "project",
+      "path": "../WConnect.Auth.Domain/WConnect.Auth.Domain.csproj",
+      "msbuildProject": "../WConnect.Auth.Domain/WConnect.Auth.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "WConnect.Auth.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/wmeida/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Core/WConnect.Auth.Core.csproj",
+      "projectName": "WConnect.Auth.Core",
+      "projectPath": "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Core/WConnect.Auth.Core.csproj",
+      "packagesPath": "/home/wmeida/.nuget/packages/",
+      "outputPath": "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Core/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/wmeida/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Domain/WConnect.Auth.Domain.csproj": {
+              "projectPath": "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Domain/WConnect.Auth.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/home/wmeida/.programs/dotnet7/sdk/7.0.400/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

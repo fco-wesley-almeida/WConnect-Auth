@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WConnect.Auth.Application", "WConnect.Auth.Application\WConnect.Auth.Application.csproj", "{29484D10-A761-42FC-892A-58FA9A1EF80D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WConnect.Auth.Domain", "WConnect.Auth.Domain\WConnect.Auth.Domain.csproj", "{4B585FD2-3581-4B59-A811-9E6BFE121E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WConnect.Auth.Core", "WConnect.Auth.Core\WConnect.Auth.Core.csproj", "{0F3AA540-30AB-49EA-BDC0-651421431062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WConnect.Auth.Database", "WConnect.Auth.Database\WConnect.Auth.Database.csproj", "{59287DE4-CEF1-4910-957C-DB13EF7DCC1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29484D10-A761-42FC-892A-58FA9A1EF80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29484D10-A761-42FC-892A-58FA9A1EF80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29484D10-A761-42FC-892A-58FA9A1EF80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29484D10-A761-42FC-892A-58FA9A1EF80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B585FD2-3581-4B59-A811-9E6BFE121E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B585FD2-3581-4B59-A811-9E6BFE121E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B585FD2-3581-4B59-A811-9E6BFE121E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B585FD2-3581-4B59-A811-9E6BFE121E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3AA540-30AB-49EA-BDC0-651421431062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3AA540-30AB-49EA-BDC0-651421431062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3AA540-30AB-49EA-BDC0-651421431062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3AA540-30AB-49EA-BDC0-651421431062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59287DE4-CEF1-4910-957C-DB13EF7DCC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59287DE4-CEF1-4910-957C-DB13EF7DCC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59287DE4-CEF1-4910-957C-DB13EF7DCC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59287DE4-CEF1-4910-957C-DB13EF7DCC1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

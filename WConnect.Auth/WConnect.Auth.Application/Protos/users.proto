@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "WConnect.Auth.Application";
+
+package users;
+
+service Users {
+  rpc SignUp (SignUpGrpcRequest) returns (SignUpGrpcResponse);
+}
+
+message SignUpGrpcRequest {
+  string name = 1;
+  string login = 2;
+  string password = 3;
+}
+
+message SignUpGrpcResponse {
+  int32 id = 1;
+}

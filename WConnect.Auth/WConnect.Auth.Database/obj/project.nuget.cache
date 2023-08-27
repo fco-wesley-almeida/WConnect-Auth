@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "AFnwwSmkVpC/kG31fTHDcvY4Z3/7lK8+UlL86U/YmQGV7NMH87DGQOZSwgKIUTYG7wDpbEYKJgeKPsLuRkgxSA==",
+  "success": true,
+  "projectFilePath": "/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.Database/WConnect.Auth.Database.csproj",
+  "expectedPackageFiles": [
+    "/home/wmeida/.nuget/packages/autofac/7.0.1/autofac.7.0.1.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/dapper/2.0.143/dapper.2.0.143.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/dapper.extensions.mysql/4.2.4/dapper.extensions.mysql.4.2.4.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/dapper.extensions.netcore/4.2.4/dapper.extensions.netcore.4.2.4.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.configuration.binder/7.0.4/microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.fileproviders.abstractions/7.0.0/microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.fileproviders.physical/7.0.0/microsoft.extensions.fileproviders.physical.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.filesystemglobbing/7.0.0/microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.hosting.abstractions/7.0.0/microsoft.extensions.hosting.abstractions.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.1/microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/mysqlconnector/2.2.7/mysqlconnector.2.2.7.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/wmeida/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

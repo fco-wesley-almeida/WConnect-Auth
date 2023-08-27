@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/WConnect.Auth.Application.props" />
+</Project>
