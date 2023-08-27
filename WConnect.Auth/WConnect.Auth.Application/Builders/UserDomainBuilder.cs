@@ -42,7 +42,6 @@ public class UserDomainBuilder: IUserDomainBuilder
         ArgumentNullException.ThrowIfNull(_login);
         ArgumentNullException.ThrowIfNull(_password);
         ArgumentNullException.ThrowIfNull(_name);
-        ArgumentNullException.ThrowIfNull(_login);
         Credential credential = new(_login, _password);
         PersonalData personalData = new(_name, _photoUri);
         return new(credential, personalData);

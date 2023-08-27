@@ -5,7 +5,7 @@ public class PersonalData
     public PersonalData(string name, Uri? photoUrl)
     {
         ArgumentException.ThrowIfNullOrEmpty(name);
-        Name = name;
+        Name = name.Trim();
         PhotoUrl = photoUrl;
     }
     

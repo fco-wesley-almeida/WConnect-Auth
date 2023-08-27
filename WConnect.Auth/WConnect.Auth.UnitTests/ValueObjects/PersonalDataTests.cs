@@ -38,4 +38,15 @@ public class PersonalDataTests
         );
         Assert.True(true);
     }
+    
+    [Fact]
+    public void Constructor_WhenNameHaveSpaces_ShouldTrim()
+    {
+        var name = "  " + Faker.StringFaker.AlphaNumeric(10) + "  ";
+        PersonalData personalData = new (
+            name,
+            photoUrl: new Uri(Faker.InternetFaker.Url())
+        );
+        Assert.Equal(name.Trim(), personalData.Name);
+    }
 }
