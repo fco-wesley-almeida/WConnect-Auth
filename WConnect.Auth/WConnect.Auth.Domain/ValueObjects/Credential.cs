@@ -4,6 +4,8 @@ public class Credential
 {
     public Credential(Login login, Password password)
     {
+        ArgumentNullException.ThrowIfNull(login);
+        ArgumentNullException.ThrowIfNull(password);
         Login = login;
         Password = password;
     }

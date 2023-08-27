@@ -4,7 +4,8 @@ public class PersonalData
 {
     public PersonalData(string name, Uri? photoUrl)
     {
-        Name = name ?? throw new ArgumentNullException(nameof(name));
+        ArgumentException.ThrowIfNullOrEmpty(name);
+        Name = name;
         PhotoUrl = photoUrl;
     }
 
