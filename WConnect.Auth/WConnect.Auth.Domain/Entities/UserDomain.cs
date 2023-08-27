@@ -9,7 +9,9 @@ public class UserDomain
 
     public UserDomain(Credential credential, PersonalData personalData)
     {
-        Credential = credential ?? throw new ArgumentNullException(nameof(credential));
-        PersonalData = personalData ?? throw new ArgumentNullException(nameof(personalData));
+        ArgumentNullException.ThrowIfNull(credential);
+        ArgumentNullException.ThrowIfNull(personalData);
+        Credential = credential;
+        PersonalData = personalData;
     }
 }

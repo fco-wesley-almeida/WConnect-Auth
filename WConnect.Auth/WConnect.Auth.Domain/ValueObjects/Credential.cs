@@ -9,6 +9,8 @@ public class Credential
         Login = login;
         Password = password;
     }
+    
+    public Credential() {}
 
     public Login Login { get; }
     public Password Password { get; }

@@ -6,15 +6,15 @@ namespace WConnect.Auth.UnitTests.ValueObjects;
 
 public class CredentialTests
 {
-    private Faker<Password> PasswordFaker = new();
-    private Faker<Login> LoginFaker = new();
+    private readonly Faker<Password> _passwordFaker = new();
+    private readonly Faker<Login> _loginFaker = new();
 
     [Fact]
     public void Constructor_WhenLoginIsNull_ShouldThrowArgumentNullException()
     {
         Assert.Throws<ArgumentNullException>(() =>
         {
-            _ = new Credential(null!, PasswordFaker.Generate());
+            _ = new Credential(null!, _passwordFaker.Generate());
         });
     }
     
@@ -23,14 +23,14 @@ public class CredentialTests
     {
         Assert.Throws<ArgumentNullException>(() =>
         {
-            _ = new Credential(LoginFaker.Generate(), null!);
+            _ = new Credential(_loginFaker.Generate(), null!);
         });
     }
     
     [Fact]
     public void Constructor_WhenArgumentsAreValid_ShouldPass()
     {
-        _ = new Credential(LoginFaker.Generate(), PasswordFaker.Generate());
+        _ = new Credential(_loginFaker.Generate(), _passwordFaker.Generate());
         Assert.True(true);
     }
 }

@@ -8,6 +8,8 @@ public class PersonalData
         Name = name;
         PhotoUrl = photoUrl;
     }
+    
+    public PersonalData() {}
 
     public string Name { get; }
     public Uri? PhotoUrl  { get; }
