@@ -17,9 +17,19 @@ public class UserRowTests: IClassFixture<UserFixture>
         _user = userFixture.User;
         _timeProvider = new TimeFaker(DateTime.Now);
     }
+    [Fact]
+    // It is necessary for Reflection process used by Dapper
+    public void Constructor_WithoutParameters_ShouldPass() 
+    {
+        // Act
+        _ = new UserRow();
+
+        // Assert
+        Assert.True(true);
+    }
 
     [Fact]
-    public void Constructor_FromUser_SetsPropertiesCorrectly()
+    public void Constructor_WithUser_ShouldSetPropertiesCorrectly()
     {
         // Act
         var userRow = new UserRow(_user, _timeProvider);

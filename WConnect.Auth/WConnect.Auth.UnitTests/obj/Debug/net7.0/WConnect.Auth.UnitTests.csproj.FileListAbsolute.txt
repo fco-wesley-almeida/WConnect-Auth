@@ -127,3 +127,6 @@
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/obj/Debug/net7.0/WConnect.Auth.UnitTests.genruntimeconfig.cache
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/obj/Debug/net7.0/ref/WConnect.Auth.UnitTests.dll
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Bogus.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Castle.Core.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Moq.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Moq.Dapper.dll
