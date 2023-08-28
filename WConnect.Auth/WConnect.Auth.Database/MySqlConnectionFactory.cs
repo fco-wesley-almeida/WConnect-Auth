@@ -12,6 +12,8 @@ public class MySqlConnectionFactory
 
     private static string ConnectionString()
     {
-        return "Server=localhost;User ID=m01;Password=m01;Database=wconnect-auth";
+        var envVar = Environment.GetEnvironmentVariable("DB_CONNECTION");
+        ArgumentException.ThrowIfNullOrEmpty(envVar);
+        return envVar;
     }
 }

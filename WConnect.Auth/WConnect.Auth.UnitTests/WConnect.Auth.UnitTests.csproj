@@ -26,10 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Repositories\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\WConnect.Auth.Application\WConnect.Auth.Application.csproj" />
       <ProjectReference Include="..\WConnect.Auth.Core\WConnect.Auth.Core.csproj" />
       <ProjectReference Include="..\WConnect.Auth.Database\WConnect.Auth.Database.csproj" />
