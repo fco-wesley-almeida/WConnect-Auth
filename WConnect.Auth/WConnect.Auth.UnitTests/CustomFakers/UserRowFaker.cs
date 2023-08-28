@@ -12,8 +12,8 @@ public class UserRowFaker
             login: Faker.StringFaker.AlphaNumeric(10),
             password: Faker.StringFaker.AlphaNumeric(10),
             photoUrl: Faker.StringFaker.AlphaNumeric(10),
-            createdAt: DateTime.Now,
-            modifiedAt: DateTime.Now,
+            createdAt: Faker.DateTimeFaker.DateTime(),
+            modifiedAt: Faker.DateTimeFaker.DateTime(),
             deleted
         );
     }
