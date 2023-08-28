@@ -1,15 +1,10 @@
-using System.Data;
-using Grpc.Core;
 using Moq;
-using MySqlConnector;
 using WConnect.Auth.Application;
-using WConnect.Auth.Application.Builders;
 using WConnect.Auth.Application.Exceptions;
 using WConnect.Auth.Application.Services;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Repositories;
-using WConnect.Auth.Database.Repositories;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;

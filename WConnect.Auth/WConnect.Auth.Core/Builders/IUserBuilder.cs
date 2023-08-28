@@ -1,5 +1,4 @@
 using WConnect.Auth.Domain.Entities;
-using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Core.Builders;
 

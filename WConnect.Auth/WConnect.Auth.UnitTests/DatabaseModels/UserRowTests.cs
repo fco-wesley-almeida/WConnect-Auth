@@ -1,7 +1,6 @@
 using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Domain.Entities;
-using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;
 using WConnect.Auth.UnitTests.Fixtures;
 

@@ -1,5 +1,3 @@
-using System.Net.Http.Json;
-using Newtonsoft.Json;
 using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.UnitTests.ValueObjects;

@@ -3,7 +3,6 @@ using WConnect.Auth.Application.Builders;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.Repositories;
 using WConnect.Auth.Database.Repositories;
-using Microsoft.Extensions.DependencyInjection;
 using WConnect.Auth.Application.Providers;
 using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Database;

@@ -1,5 +1,4 @@
 using Grpc.Core;
-using WConnect.Auth.Application;
 
 namespace WConnect.Auth.Application.Services;
 
