@@ -8,5 +8,6 @@ public interface IUserBuilder
     public IUserBuilder WithPassword(string password);
     public IUserBuilder WithLogin(string login);
     public IUserBuilder WithPhotoUrl(string? uri);
+    public IUserBuilder WithId(int id);
     public User Build();
 }

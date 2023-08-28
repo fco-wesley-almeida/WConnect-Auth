@@ -1,5 +1,6 @@
 using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Domain.Entities;
+using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Core.DbModels;
 
@@ -45,5 +46,20 @@ public class UserRow
         CreatedAt = timeProvider.Now();
         ModifiedAt = timeProvider.Now();
         Deleted = false;
+    }
+
+    public User AsEntity()
+    {
+        return new(
+            credential: new(
+                id: Id,
+                new(Login), 
+                new(Password)
+            ), 
+            personalData: new(
+                Name, 
+                PhotoUrl is not null ? new(PhotoUrl) : null
+            )
+        );
     }
 }

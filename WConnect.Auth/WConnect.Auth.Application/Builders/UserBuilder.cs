@@ -10,6 +10,7 @@ public class UserBuilder: IUserBuilder
     private Password _password = null!;
     private Login _login = null!;
     private Uri? _photoUri;
+    private int? _id = null!;
     public IUserBuilder WithName(string name)
     {
         _name = name;
@@ -37,12 +38,20 @@ public class UserBuilder: IUserBuilder
         return this;
     }
 
+    public IUserBuilder WithId(int id)
+    {
+        _id = id;
+        return this;
+    }
+
     public User Build()
     {
         ArgumentNullException.ThrowIfNull(_login);
         ArgumentNullException.ThrowIfNull(_password);
         ArgumentNullException.ThrowIfNull(_name);
-        Credential credential = new(_login, _password);
+        Credential credential = _id is not null 
+            ? new(_id ?? 0, _login, _password) 
+            : new(_login, _password);
         PersonalData personalData = new(_name, _photoUri);
         return new(credential, personalData);
     }

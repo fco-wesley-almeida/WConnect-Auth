@@ -8,6 +8,14 @@
 
     <ItemGroup>
         <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\signin.proto">
+          <GrpcServices>Server</GrpcServices>
+          <Access>Public</Access>
+          <ProtoCompile>True</ProtoCompile>
+          <CompileOutputs>True</CompileOutputs>
+          <OutputDir>obj/Debug/net7.0/</OutputDir>
+          <Generator>MSBuild:Compile</Generator>
+        </Protobuf>
         <Protobuf Include="Protos\signUp.proto">
           <GrpcServices>Server</GrpcServices>
           <Access>Public</Access>

@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization.Metadata;
+
 namespace WConnect.Auth.Domain.ValueObjects;
 
 public class Password
@@ -22,4 +24,8 @@ public class Password
     }
 
     public override string ToString() => _password;
+    public bool Equals(Password password)
+    {
+        return ToString() == password.ToString();
+    }
 }

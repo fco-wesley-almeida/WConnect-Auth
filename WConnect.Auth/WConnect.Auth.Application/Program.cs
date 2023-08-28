@@ -1,5 +1,5 @@
-using WConnect.Auth.Application.Services;
 using WConnect.Auth.Application.Configuration;
+using WConnect.Auth.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,13 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 builder.Services.AddDependencyInjection();
+// builder.I
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.MapGrpcService<GreeterService>();
 app.MapGrpcService<SignUpService>();
+app.MapGrpcService<SignInService>();
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+
+// app.UseAuthentication();
+// app.UseAuthorization();
 
 app.Run();

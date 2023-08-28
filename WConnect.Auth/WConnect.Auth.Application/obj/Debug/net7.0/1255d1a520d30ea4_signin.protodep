@@ -1,0 +1,2 @@
+obj/Debug/net7.0/Protos/Signin.cs \
+obj/Debug/net7.0/Protos/SigninGrpc.cs: Protos/signin.proto
