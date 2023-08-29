@@ -130,3 +130,10 @@
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Castle.Core.dll
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Moq.dll
 /home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Moq.Dapper.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/wmeida/workspace/wmeida/wconnect/WConnect-Auth/WConnect.Auth/WConnect.Auth.UnitTests/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

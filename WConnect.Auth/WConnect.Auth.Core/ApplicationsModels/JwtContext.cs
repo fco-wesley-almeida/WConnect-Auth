@@ -9,7 +9,7 @@ public class JwtContext
 
     public JwtContext(User user)
     {
-        UserId = user.Credential.Id;
+        UserId = user.Credential.Id ?? throw new ArgumentNullException(nameof(user.Credential.Id));
         Login = user.Credential.Login.ToString();
     }
 }

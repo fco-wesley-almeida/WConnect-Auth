@@ -1,4 +1,5 @@
 using WConnect.Auth.Domain.ValueObjects;
+using WConnect.Auth.UnitTests.CustomFakers;
 
 namespace WConnect.Auth.UnitTests.ValueObjects;
 
@@ -63,5 +64,29 @@ public class PasswordTests
         string password = " " + Faker.StringFaker.AlphaNumeric(MinLength) + " ";
         var passwordObj = new Password(password);
         Assert.Equal(password.Trim(), passwordObj.ToString());
+    }
+    
+    [Fact]
+    public void Constructor_WithoutParams_ShouldWork()
+    {
+        _ = new Password();
+        Assert.True(true);
+    }
+    
+    [Fact]
+    public void Equals_WhenPasswordIsDifferent_ShouldReturnFalse()
+    {
+        Password password1 = new(PasswordFaker.Fake());
+        Password password2 = new(PasswordFaker.Fake());
+        Assert.False(password1.Equals(password2));
+    }
+    
+    [Fact]
+    public void Equals_WhenPasswordIsEqual_ShouldReturnTrue()
+    {
+        string fakePassword = PasswordFaker.Fake();
+        Password password1 = new(fakePassword);
+        Password password2 = new(fakePassword);
+        Assert.True(password1.Equals(password2));
     }
 }

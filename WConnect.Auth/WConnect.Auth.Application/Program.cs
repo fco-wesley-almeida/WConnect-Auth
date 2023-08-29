@@ -13,7 +13,6 @@ builder.Services.AddDependencyInjection();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
 app.MapGrpcService<SignUpService>();
 app.MapGrpcService<SignInService>();
 app.MapGet("/",
