@@ -19,7 +19,6 @@ public static class DependencyInjectionExtension
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<ITimeProvider, TimeProvider>();
-        services.AddScoped<IIdentityService, IdentityService>();
         services.AddTransient<IDbConnection>(_ => MySqlConnectionFactory.Create());
         services.AddScoped<IJwtTokenGeneratorService, JwtTokenGeneratorService>();
         services.AddTransient<IClaimsIdentityBuilder, ClaimsIdentityBuilder>();

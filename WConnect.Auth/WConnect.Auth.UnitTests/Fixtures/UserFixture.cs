@@ -11,6 +11,7 @@ public class UserFixture
     public UserFixture()
     {
         Credential credential = new(
+            id: new Random().Next(),
             login: new Login(LoginFaker.Fake()),
             password: new Password(PasswordFaker.Fake())
         );

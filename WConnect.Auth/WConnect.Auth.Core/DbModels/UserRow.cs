@@ -38,7 +38,7 @@ public class UserRow
 
     public UserRow(User user, ITimeProvider timeProvider)
     {
-        Id = 0;
+        Id = user.Credential.Id ?? 0;
         Name = user.PersonalData.Name;
         Login = user.Credential.Login.ToString();
         Password = user.Credential.Password.ToString();

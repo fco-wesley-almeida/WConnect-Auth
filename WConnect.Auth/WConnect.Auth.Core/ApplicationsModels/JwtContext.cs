@@ -5,11 +5,9 @@ namespace WConnect.Auth.Core.ApplicationsModels;
 public class JwtContext
 {
     public int UserId { get; }
-    public string Login { get; }
 
     public JwtContext(User user)
     {
         UserId = user.Credential.Id ?? throw new ArgumentNullException(nameof(user.Credential.Id));
-        Login = user.Credential.Login.ToString();
     }
 }
