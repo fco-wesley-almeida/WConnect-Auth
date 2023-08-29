@@ -1,4 +1,5 @@
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
 using WConnect.Auth.Application.Builders;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.Repositories;
@@ -24,6 +25,7 @@ public static class DependencyInjectionExtension
         services.AddTransient<IClaimsIdentityBuilder, ClaimsIdentityBuilder>();
         services.AddTransient<IJwtTokenBuilder, JwtTokenBuilder>();
         services.AddTransient<ISecurityTokenDescriptorBuilder, SecurityTokenDescriptorBuilder>();
+        services.AddTransient<JwtSecurityTokenHandler>(_ => new JwtSecurityTokenHandler());
         return services;
     }
 }

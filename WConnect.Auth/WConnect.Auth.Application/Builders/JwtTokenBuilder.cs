@@ -7,7 +7,13 @@ namespace WConnect.Auth.Application.Builders;
 
 public class JwtTokenBuilder: IJwtTokenBuilder
 {
-    private SecurityTokenDescriptor? _securityTokenDescriptor;
+    private readonly JwtSecurityTokenHandler _jwtSecurityTokenHandler;
+    private SecurityTokenDescriptor _securityTokenDescriptor = null!;
+
+    public JwtTokenBuilder(JwtSecurityTokenHandler jwtSecurityTokenHandler)
+    {
+        _jwtSecurityTokenHandler = jwtSecurityTokenHandler;
+    }
 
     public IJwtTokenBuilder WithSecurityTokenDescriptor(SecurityTokenDescriptor securityTokenDescriptor)
     {
@@ -17,11 +23,12 @@ public class JwtTokenBuilder: IJwtTokenBuilder
 
     public JwtToken Build()
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var token = tokenHandler.CreateToken(_securityTokenDescriptor);
+        ArgumentNullException.ThrowIfNull(_securityTokenDescriptor);
+        var token = _jwtSecurityTokenHandler.CreateToken(_securityTokenDescriptor);
         return new(
-            tokenHandler.WriteToken(token), 
-            _securityTokenDescriptor?.Expires ?? throw new ArgumentNullException(nameof(_securityTokenDescriptor.Expires))
+            _jwtSecurityTokenHandler.WriteToken(token), 
+            _securityTokenDescriptor.Expires 
+                ?? throw new ArgumentNullException(nameof(_securityTokenDescriptor.Expires))
         );
     }
 }
