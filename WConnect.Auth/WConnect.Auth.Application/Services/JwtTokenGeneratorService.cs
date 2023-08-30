@@ -46,12 +46,17 @@ public class JwtTokenGeneratorService: IJwtTokenGeneratorService
 
     private SecurityTokenDescriptor SecurityTokenDescriptor(User user, JwtContext jwtContext) =>
         _securityTokenDescriptorBuilder
-           .WithAudience(_audience)
-           .WithExpires(DateTime.Now.ToUniversalTime().AddMinutes(_accessTokenValidityInMinutes))
-           .WithIssuer(_issuer)
-           .WithSubject(ClaimsIdentity(user, jwtContext))
-           .WithSigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature)
-           .Build();
+            .WithAudience(_audience)
+            .WithExpires(DateTime.Now.ToUniversalTime().AddMinutes(_accessTokenValidityInMinutes))
+            .WithIssuer(_issuer)
+            .WithSubject(ClaimsIdentity(user, jwtContext))
+            .WithSigningCredentials(SigningCredentials())
+            .Build();
+
+    private SigningCredentials SigningCredentials() => new (
+        key: new SymmetricSecurityKey(_key),
+        algorithm: SecurityAlgorithms.HmacSha512Signature
+    );
 
     private ClaimsIdentity ClaimsIdentity(User user, JwtContext jwtContext) =>
         _claimsIdentityBuilder

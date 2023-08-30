@@ -7,8 +7,8 @@ public interface ISecurityTokenDescriptorBuilder
 {
     ISecurityTokenDescriptorBuilder WithSubject(ClaimsIdentity subject);
     ISecurityTokenDescriptorBuilder WithExpires(DateTime expires);
-    ISecurityTokenDescriptorBuilder WithIssuer(string? issuer);
-    ISecurityTokenDescriptorBuilder WithAudience(string? audience);
-    ISecurityTokenDescriptorBuilder WithSigningCredentials(byte[] key, string algorithm);
+    ISecurityTokenDescriptorBuilder WithIssuer(string issuer);
+    ISecurityTokenDescriptorBuilder WithAudience(string audience);
+    ISecurityTokenDescriptorBuilder WithSigningCredentials(SigningCredentials signingCredentials);
     SecurityTokenDescriptor Build();
 }
