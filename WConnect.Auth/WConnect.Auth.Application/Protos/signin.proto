@@ -15,4 +15,5 @@ message SignInGrpcRequest {
 
 message SignInGrpcResponse {
   string access_token = 1;
+  string access_token_expiry_time = 2;
 }

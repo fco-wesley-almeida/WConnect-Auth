@@ -25,16 +25,17 @@ namespace WConnect.Auth.Application {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNQcm90b3Mvc2lnbmluLnByb3RvEgV1c2VycyI0ChFTaWduSW5HcnBjUmVx",
-            "dWVzdBINCgVsb2dpbhgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIqChJTaWdu",
-            "SW5HcnBjUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJMkcKBlNpZ25J",
-            "bhI9CgZTaWduSW4SGC51c2Vycy5TaWduSW5HcnBjUmVxdWVzdBoZLnVzZXJz",
-            "LlNpZ25JbkdycGNSZXNwb25zZUIcqgIZV0Nvbm5lY3QuQXV0aC5BcHBsaWNh",
-            "dGlvbmIGcHJvdG8z"));
+            "dWVzdBINCgVsb2dpbhgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSJMChJTaWdu",
+            "SW5HcnBjUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJEiAKGGFjY2Vz",
+            "c190b2tlbl9leHBpcnlfdGltZRgCIAEoCTJHCgZTaWduSW4SPQoGU2lnbklu",
+            "EhgudXNlcnMuU2lnbkluR3JwY1JlcXVlc3QaGS51c2Vycy5TaWduSW5HcnBj",
+            "UmVzcG9uc2VCHKoCGVdDb25uZWN0LkF1dGguQXBwbGljYXRpb25iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::WConnect.Auth.Application.SignInGrpcRequest), global::WConnect.Auth.Application.SignInGrpcRequest.Parser, new[]{ "Login", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WConnect.Auth.Application.SignInGrpcResponse), global::WConnect.Auth.Application.SignInGrpcResponse.Parser, new[]{ "AccessToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::WConnect.Auth.Application.SignInGrpcResponse), global::WConnect.Auth.Application.SignInGrpcResponse.Parser, new[]{ "AccessToken", "AccessTokenExpiryTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -302,6 +303,7 @@ namespace WConnect.Auth.Application {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SignInGrpcResponse(SignInGrpcResponse other) : this() {
       accessToken_ = other.accessToken_;
+      accessTokenExpiryTime_ = other.accessTokenExpiryTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -323,6 +325,18 @@ namespace WConnect.Auth.Application {
       }
     }
 
+    /// <summary>Field number for the "access_token_expiry_time" field.</summary>
+    public const int AccessTokenExpiryTimeFieldNumber = 2;
+    private string accessTokenExpiryTime_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccessTokenExpiryTime {
+      get { return accessTokenExpiryTime_; }
+      set {
+        accessTokenExpiryTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -339,6 +353,7 @@ namespace WConnect.Auth.Application {
         return true;
       }
       if (AccessToken != other.AccessToken) return false;
+      if (AccessTokenExpiryTime != other.AccessTokenExpiryTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -347,6 +362,7 @@ namespace WConnect.Auth.Application {
     public override int GetHashCode() {
       int hash = 1;
       if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
+      if (AccessTokenExpiryTime.Length != 0) hash ^= AccessTokenExpiryTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -369,6 +385,10 @@ namespace WConnect.Auth.Application {
         output.WriteRawTag(10);
         output.WriteString(AccessToken);
       }
+      if (AccessTokenExpiryTime.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccessTokenExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -383,6 +403,10 @@ namespace WConnect.Auth.Application {
         output.WriteRawTag(10);
         output.WriteString(AccessToken);
       }
+      if (AccessTokenExpiryTime.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccessTokenExpiryTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -395,6 +419,9 @@ namespace WConnect.Auth.Application {
       int size = 0;
       if (AccessToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessToken);
+      }
+      if (AccessTokenExpiryTime.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessTokenExpiryTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -410,6 +437,9 @@ namespace WConnect.Auth.Application {
       }
       if (other.AccessToken.Length != 0) {
         AccessToken = other.AccessToken;
+      }
+      if (other.AccessTokenExpiryTime.Length != 0) {
+        AccessTokenExpiryTime = other.AccessTokenExpiryTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -430,6 +460,10 @@ namespace WConnect.Auth.Application {
             AccessToken = input.ReadString();
             break;
           }
+          case 18: {
+            AccessTokenExpiryTime = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -447,6 +481,10 @@ namespace WConnect.Auth.Application {
             break;
           case 10: {
             AccessToken = input.ReadString();
+            break;
+          }
+          case 18: {
+            AccessTokenExpiryTime = input.ReadString();
             break;
           }
         }

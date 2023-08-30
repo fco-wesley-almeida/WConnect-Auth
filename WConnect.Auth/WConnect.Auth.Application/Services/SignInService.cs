@@ -30,7 +30,8 @@ public class SignInService: SignIn.SignInBase
         var jwtToken = _jwtTokenGeneratorService.GenerateToken(user); 
         return new()
         {
-            AccessToken = jwtToken.AccessToken
+            AccessToken = jwtToken.AccessToken,
+            AccessTokenExpiryTime = jwtToken.AccessTokenExpiryTime.ToString("s")
         };
     }
 }
