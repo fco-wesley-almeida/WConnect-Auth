@@ -9,7 +9,7 @@ public class MissingConfigurationParameterException: RpcException
     }
     private static Status ErrorStatus(string paramName)
     {
-        return new Status(StatusCode.NotFound, ErrorMessage(paramName));
+        return new Status(StatusCode.FailedPrecondition, ErrorMessage(paramName));
     }
     
     private static string ErrorMessage(string paramName)
