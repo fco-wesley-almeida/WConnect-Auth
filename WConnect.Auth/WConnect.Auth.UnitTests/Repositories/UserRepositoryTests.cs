@@ -5,7 +5,6 @@ using WConnect.Auth.Database.Repositories;
 using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;
 using WConnect.Auth.UnitTests.Fixtures;
-using System.Linq;
 using Dapper;
 
 namespace WConnect.Auth.UnitTests.Repositories;

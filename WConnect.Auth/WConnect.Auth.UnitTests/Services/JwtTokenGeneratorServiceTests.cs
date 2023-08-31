@@ -9,7 +9,6 @@ using WConnect.Auth.Application.Exceptions;
 using WConnect.Auth.Application.Services;
 using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Core.Builders;
-using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Core.Services;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.UnitTests.CustomFakers;

@@ -1,6 +1,5 @@
 using Grpc.Core;
 using WConnect.Auth.Application.Exceptions;
-using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Core.Repositories;
 using WConnect.Auth.Core.Services;
 using WConnect.Auth.Domain.ValueObjects;

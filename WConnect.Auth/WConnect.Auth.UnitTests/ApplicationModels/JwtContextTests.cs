@@ -2,7 +2,6 @@ using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;
-using WConnect.Auth.UnitTests.Fixtures;
 
 namespace WConnect.Auth.UnitTests.ApplicationModels;
 

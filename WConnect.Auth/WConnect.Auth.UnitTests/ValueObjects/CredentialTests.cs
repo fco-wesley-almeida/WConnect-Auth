@@ -1,5 +1,4 @@
 using WConnect.Auth.Domain.ValueObjects;
-using WConnect.Auth.UnitTests.CustomFakers;
 
 namespace WConnect.Auth.UnitTests.ValueObjects;
 

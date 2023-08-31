@@ -1,5 +1,4 @@
 using System.IdentityModel.Tokens.Jwt;
-using System.Xml;
 using Microsoft.IdentityModel.Tokens;
 
 namespace WConnect.Auth.UnitTests.CustomFakers;

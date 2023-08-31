@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization.Metadata;
-
 namespace WConnect.Auth.Domain.ValueObjects;
 
 public class Password

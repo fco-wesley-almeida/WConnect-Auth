@@ -1,6 +1,5 @@
 using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Domain.Entities;
-using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Core.DbModels;
 

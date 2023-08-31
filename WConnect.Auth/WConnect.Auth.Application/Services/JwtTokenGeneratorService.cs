@@ -3,7 +3,6 @@ using System.Text;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using WConnect.Auth.Application.Exceptions;
 using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.Providers;

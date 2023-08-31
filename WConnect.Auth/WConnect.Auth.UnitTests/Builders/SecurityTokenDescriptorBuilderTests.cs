@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using WConnect.Auth.Application.Builders;
 using WConnect.Auth.Core.Builders;
