@@ -16,11 +16,11 @@ public class SecurityTokenHandlerFake: JwtSecurityTokenHandler
         public override DateTime ValidTo { get; } = DateTime.Now;
     }
     
-    private readonly string _fakeToken;
+    public string FakeToken { get; }
 
     public SecurityTokenHandlerFake(string fakeToken)
     {
-        _fakeToken = fakeToken;
+        FakeToken = fakeToken;
     }
 
 
@@ -31,6 +31,6 @@ public class SecurityTokenHandlerFake: JwtSecurityTokenHandler
 
     public override string WriteToken(SecurityToken token)
     {
-        return _fakeToken;
+        return FakeToken;
     }
 }
