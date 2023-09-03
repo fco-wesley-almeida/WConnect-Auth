@@ -16,18 +16,21 @@ public static class DependencyInjectionExtension
 {
     public static IServiceCollection AddDependencyInjection(this IServiceCollection services)
     {
+        IConfiguration configuration = services.BuildServiceProvider().GetService<IConfiguration>()!;
+        
         services.AddScoped<IUserRepository,UserRepository>();
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<ITimeProvider, TimeProvider>();
         services.AddScoped<IStorageService, StorageService>();
         services.AddScoped<IJwtTokenGeneratorService, JwtTokenGeneratorService>();
+
         
         services.AddTransient<IClaimsIdentityBuilder, ClaimsIdentityBuilder>();
         services.AddTransient<IJwtTokenBuilder, JwtTokenBuilder>();
         services.AddTransient<ISecurityTokenDescriptorBuilder, SecurityTokenDescriptorBuilder>();
         services.AddTransient<JwtSecurityTokenHandler>(_ => new JwtSecurityTokenHandler());
-        services.AddTransient<IDbConnection>(_ => MySqlConnectionFactory.Create());
+        services.AddTransient<IDbConnection>(_ => MySqlConnectionFactory.Create(configuration));
         
         return services;
     }
