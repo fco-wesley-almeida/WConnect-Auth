@@ -20,12 +20,15 @@ public static class DependencyInjectionExtension
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<IUserBuilder,UserBuilder>();
         services.AddScoped<ITimeProvider, TimeProvider>();
-        services.AddTransient<IDbConnection>(_ => MySqlConnectionFactory.Create());
+        services.AddScoped<IStorageService, StorageService>();
         services.AddScoped<IJwtTokenGeneratorService, JwtTokenGeneratorService>();
+        
         services.AddTransient<IClaimsIdentityBuilder, ClaimsIdentityBuilder>();
         services.AddTransient<IJwtTokenBuilder, JwtTokenBuilder>();
         services.AddTransient<ISecurityTokenDescriptorBuilder, SecurityTokenDescriptorBuilder>();
         services.AddTransient<JwtSecurityTokenHandler>(_ => new JwtSecurityTokenHandler());
+        services.AddTransient<IDbConnection>(_ => MySqlConnectionFactory.Create());
+        
         return services;
     }
 }

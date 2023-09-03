@@ -12,6 +12,7 @@ message SignUpGrpcRequest {
   string name = 1;
   string login = 2;
   string password = 3;
+  bytes photo = 4;
 }
 
 message SignUpGrpcResponse {

@@ -7,7 +7,7 @@
       "applicationUrl": "http://localhost:5041",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DB_CONNECTION":  "Server=localhost;User ID=m01;Password=m01;Database=wconnect-auth"
+        "DB_CONNECTION": "Server=localhost;User ID=m01;Password=m01;Database=wconnect-auth"
       }
     },
     "https": {

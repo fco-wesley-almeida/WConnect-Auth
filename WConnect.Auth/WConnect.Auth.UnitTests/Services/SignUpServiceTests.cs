@@ -5,6 +5,7 @@ using WConnect.Auth.Application.Services;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Repositories;
+using WConnect.Auth.Core.Services;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;
@@ -17,6 +18,7 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
     private readonly SignUp.SignUpBase _sut;
     private readonly Mock<IUserRepository> _userRepositoryMock;
     private readonly Mock<IUserBuilder> _userBuilderMock;
+    private readonly Mock<IStorageService> _storageServiceMock;
     private readonly User _user;
     
     public SignUpServiceTests(UserFixture userFixture)
@@ -24,6 +26,7 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
         _user = userFixture.User;
         _userRepositoryMock = new();
         _userBuilderMock = new();
+        _storageServiceMock = new();
         _userBuilderMock
             .Setup(x => x.WithName(It.IsAny<string>()))
             .Returns(_userBuilderMock.Object);
@@ -36,10 +39,15 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
         _userBuilderMock
             .Setup(x => x.WithPhotoUrl(It.IsAny<string>()))
             .Returns(_userBuilderMock.Object);
+        _storageServiceMock
+            .Setup(x => x.UploadPhotoAsync(It.IsAny<byte[]>()))
+            .ReturnsAsync(new Uri(Faker.InternetFaker.Url()));
+            
         _sut = new SignUpService(
             userRepository: _userRepositoryMock.Object,
             userBuilder: _userBuilderMock.Object,
-            timeProvider: new TimeFaker(DateTime.Now)
+            timeProvider: new TimeFaker(DateTime.Now),
+            storageService: _storageServiceMock.Object
         );
     }
 
