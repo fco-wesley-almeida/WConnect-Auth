@@ -3,7 +3,7 @@ using Amazon.S3;
 using Amazon.S3.Transfer;
 using Microsoft.Extensions.Configuration;
 
-namespace WConnect.Auth.Core.ApplicationsModels;
+namespace WConnect.Auth.Core.UseCases.SignUp;
 
 public class AwsBucketConfig
 {

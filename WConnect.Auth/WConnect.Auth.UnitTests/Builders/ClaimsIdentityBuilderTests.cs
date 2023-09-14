@@ -1,5 +1,5 @@
 using WConnect.Auth.Application.Builders;
-using WConnect.Auth.Core.Builders;
+using WConnect.Auth.Core.UseCases.SignIn;
 
 namespace WConnect.Auth.UnitTests.Builders;
 

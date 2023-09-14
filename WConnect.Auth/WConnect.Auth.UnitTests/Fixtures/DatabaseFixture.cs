@@ -1,7 +1,7 @@
 using System.Data;
 using Dapper;
 using MySqlConnector;
-using WConnect.Auth.Core.DbModels;
+using WConnect.Auth.Core.Database.PersistenceModels;
 using WConnect.Auth.UnitTests.CustomFakers;
 
 namespace WConnect.Auth.UnitTests.Fixtures;

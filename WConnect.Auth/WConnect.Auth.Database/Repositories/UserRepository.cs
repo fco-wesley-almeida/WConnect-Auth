@@ -1,7 +1,7 @@
 using System.Data;
 using Dapper;
-using WConnect.Auth.Core.DbModels;
-using WConnect.Auth.Core.Repositories;
+using WConnect.Auth.Core.Database;
+using WConnect.Auth.Core.Database.PersistenceModels;
 using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Database.Repositories;

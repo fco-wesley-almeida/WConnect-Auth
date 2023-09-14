@@ -1,11 +1,11 @@
 using System.Data;
-using WConnect.Auth.Core.DbModels;
-using WConnect.Auth.Core.Repositories;
 using WConnect.Auth.Database.Repositories;
 using WConnect.Auth.Domain.ValueObjects;
 using WConnect.Auth.UnitTests.CustomFakers;
 using WConnect.Auth.UnitTests.Fixtures;
 using Dapper;
+using WConnect.Auth.Core.Database;
+using WConnect.Auth.Core.Database.PersistenceModels;
 
 namespace WConnect.Auth.UnitTests.Repositories;
 

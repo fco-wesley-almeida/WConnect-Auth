@@ -1,5 +1,5 @@
 using System.Security.Claims;
-using WConnect.Auth.Core.Builders;
+using WConnect.Auth.Core.UseCases.SignIn;
 
 namespace WConnect.Auth.Application.Builders;
 

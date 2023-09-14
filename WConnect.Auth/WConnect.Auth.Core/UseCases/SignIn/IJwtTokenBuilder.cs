@@ -1,7 +1,6 @@
 using Microsoft.IdentityModel.Tokens;
-using WConnect.Auth.Core.ApplicationsModels;
 
-namespace WConnect.Auth.Core.Builders;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public interface IJwtTokenBuilder
 {

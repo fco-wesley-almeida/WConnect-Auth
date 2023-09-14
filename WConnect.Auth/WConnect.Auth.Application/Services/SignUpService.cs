@@ -1,11 +1,10 @@
 using Grpc.Core;
 using WConnect.Auth.Application.Exceptions;
-using WConnect.Auth.Core.ApplicationsModels;
-using WConnect.Auth.Core.Builders;
-using WConnect.Auth.Core.DbModels;
-using WConnect.Auth.Core.Providers;
-using WConnect.Auth.Core.Repositories;
-using WConnect.Auth.Core.Services;
+using WConnect.Auth.Core;
+using WConnect.Auth.Core.Database;
+using WConnect.Auth.Core.Database.PersistenceModels;
+using WConnect.Auth.Core.UseCases.SignIn;
+using WConnect.Auth.Core.UseCases.SignUp;
 using WConnect.Auth.Domain.Entities;
 
 namespace WConnect.Auth.Application.Services;

@@ -1,4 +1,4 @@
-using WConnect.Auth.Core.ApplicationsModels;
+using WConnect.Auth.Core.UseCases.SignIn;
 
 namespace WConnect.Auth.UnitTests.ApplicationModels;
 

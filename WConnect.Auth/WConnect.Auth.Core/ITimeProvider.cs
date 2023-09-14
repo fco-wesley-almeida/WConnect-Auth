@@ -1,4 +1,4 @@
-namespace WConnect.Auth.Core.Providers;
+namespace WConnect.Auth.Core;
 
 public interface ITimeProvider
 {

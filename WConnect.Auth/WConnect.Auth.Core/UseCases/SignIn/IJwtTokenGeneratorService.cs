@@ -1,7 +1,6 @@
-using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Domain.Entities;
 
-namespace WConnect.Auth.Core.Services;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public interface IJwtTokenGeneratorService
 {

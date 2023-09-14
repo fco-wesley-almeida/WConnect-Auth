@@ -1,7 +1,7 @@
 using Grpc.Core;
 using WConnect.Auth.Application.Exceptions;
-using WConnect.Auth.Core.Repositories;
-using WConnect.Auth.Core.Services;
+using WConnect.Auth.Core.Database;
+using WConnect.Auth.Core.UseCases.SignIn;
 using WConnect.Auth.Domain.ValueObjects;
 
 namespace WConnect.Auth.Application.Services;

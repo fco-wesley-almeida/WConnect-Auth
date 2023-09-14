@@ -1,5 +1,5 @@
 using WConnect.Auth.Application.Builders;
-using WConnect.Auth.Core.Builders;
+using WConnect.Auth.Core.UseCases.SignIn;
 using WConnect.Auth.UnitTests.CustomFakers;
 
 namespace WConnect.Auth.UnitTests.Builders;

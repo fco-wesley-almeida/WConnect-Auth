@@ -1,7 +1,6 @@
-using WConnect.Auth.Core.Providers;
 using WConnect.Auth.Domain.Entities;
 
-namespace WConnect.Auth.Core.DbModels;
+namespace WConnect.Auth.Core.Database.PersistenceModels;
 
 public class UserRow
 {

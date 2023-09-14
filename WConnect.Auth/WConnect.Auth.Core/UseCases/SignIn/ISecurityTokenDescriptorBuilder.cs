@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 
-namespace WConnect.Auth.Core.Builders;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public interface ISecurityTokenDescriptorBuilder
 {

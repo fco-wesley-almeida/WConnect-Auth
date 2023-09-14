@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
-using WConnect.Auth.Core.Builders;
+using WConnect.Auth.Core.UseCases.SignIn;
 
 namespace WConnect.Auth.Application.Builders;
 

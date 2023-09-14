@@ -1,6 +1,4 @@
-using WConnect.Auth.Core.ApplicationsModels;
-
-namespace WConnect.Auth.Core.Services;
+namespace WConnect.Auth.Core.UseCases.SignUp;
 
 public interface IStorageService
 {

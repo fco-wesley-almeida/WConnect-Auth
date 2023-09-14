@@ -1,4 +1,4 @@
-using WConnect.Auth.Core.DbModels;
+using WConnect.Auth.Core.Database.PersistenceModels;
 
 namespace WConnect.Auth.UnitTests.CustomFakers;
 

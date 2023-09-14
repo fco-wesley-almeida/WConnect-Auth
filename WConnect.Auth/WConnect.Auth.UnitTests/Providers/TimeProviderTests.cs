@@ -1,5 +1,5 @@
 using WConnect.Auth.Application.Providers;
-using WConnect.Auth.Core.Providers;
+using WConnect.Auth.Core;
 
 namespace WConnect.Auth.UnitTests.Providers;
 

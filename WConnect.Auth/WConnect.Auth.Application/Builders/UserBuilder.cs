@@ -1,4 +1,4 @@
-using WConnect.Auth.Core.Builders;
+using WConnect.Auth.Core.UseCases.SignIn;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.Domain.ValueObjects;
 

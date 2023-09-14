@@ -3,12 +3,10 @@ using System.Text;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using WConnect.Auth.Core.ApplicationsModels;
-using WConnect.Auth.Core.Builders;
-using WConnect.Auth.Core.Providers;
-using WConnect.Auth.Core.Services;
 using WConnect.Auth.Domain.Entities;
 using WConnect.Auth.Application.Configuration;
+using WConnect.Auth.Core;
+using WConnect.Auth.Core.UseCases.SignIn;
 
 namespace WConnect.Auth.Application.Services;
 

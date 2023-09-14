@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace WConnect.Auth.Core.Builders;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public interface IClaimsIdentityBuilder
 {

@@ -1,7 +1,7 @@
-using WConnect.Auth.Core.DbModels;
+using WConnect.Auth.Core.Database.PersistenceModels;
 using WConnect.Auth.Domain.ValueObjects;
 
-namespace WConnect.Auth.Core.Repositories;
+namespace WConnect.Auth.Core.Database;
 
 public interface IUserRepository
 {

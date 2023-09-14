@@ -2,9 +2,8 @@ using Amazon.Runtime;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
-using WConnect.Auth.Core.Services;
 using WConnect.Auth.Application.Configuration;
-using WConnect.Auth.Core.ApplicationsModels;
+using WConnect.Auth.Core.UseCases.SignUp;
 
 namespace WConnect.Auth.Application.Services;
 

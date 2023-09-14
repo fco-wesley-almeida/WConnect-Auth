@@ -1,4 +1,4 @@
-namespace WConnect.Auth.Core.ApplicationsModels;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public class JwtToken
 {

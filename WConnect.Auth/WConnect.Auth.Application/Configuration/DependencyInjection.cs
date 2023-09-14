@@ -1,13 +1,13 @@
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using WConnect.Auth.Application.Builders;
-using WConnect.Auth.Core.Builders;
-using WConnect.Auth.Core.Repositories;
 using WConnect.Auth.Database.Repositories;
 using WConnect.Auth.Application.Providers;
 using WConnect.Auth.Application.Services;
-using WConnect.Auth.Core.Providers;
-using WConnect.Auth.Core.Services;
+using WConnect.Auth.Core;
+using WConnect.Auth.Core.Database;
+using WConnect.Auth.Core.UseCases.SignIn;
+using WConnect.Auth.Core.UseCases.SignUp;
 using WConnect.Auth.Database;
 
 namespace WConnect.Auth.Application.Configuration;

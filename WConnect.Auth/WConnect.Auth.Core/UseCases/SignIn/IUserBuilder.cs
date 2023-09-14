@@ -1,6 +1,6 @@
 using WConnect.Auth.Domain.Entities;
 
-namespace WConnect.Auth.Core.Builders;
+namespace WConnect.Auth.Core.UseCases.SignIn;
 
 public interface IUserBuilder
 {
