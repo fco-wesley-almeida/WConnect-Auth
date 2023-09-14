@@ -1,5 +1,6 @@
 using Grpc.Core;
 using WConnect.Auth.Application.Exceptions;
+using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Providers;
@@ -15,33 +16,39 @@ public class SignUpService: SignUp.SignUpBase
     private readonly IUserBuilder _userBuilder;
     private readonly ITimeProvider _timeProvider;
     private readonly IStorageService _storageService;
-
-    public SignUpService(IUserRepository userRepository, IUserBuilder userBuilder, ITimeProvider timeProvider, IStorageService storageService)
+    private readonly IConfiguration _configuration;
+    public SignUpService(IUserRepository userRepository, IUserBuilder userBuilder, ITimeProvider timeProvider, IStorageService storageService, IConfiguration configuration)
     {
         _userRepository = userRepository;
         _userBuilder = userBuilder;
         _timeProvider = timeProvider;
         _storageService = storageService;
+        _configuration = configuration;
     }
 
     public override async Task<SignUpGrpcResponse> SignUp(SignUpGrpcRequest request, ServerCallContext context)
     {
-        var photoUri = await _storageService.UploadPhotoAsync(request.Photo.ToByteArray());
-        var user = _userBuilder
-            .WithName(request.Name)
-            .WithLogin(request.Login)
-            .WithPassword(request.Password)
-            .WithPhotoUrl(photoUri.AbsoluteUri)
-            .Build();
-        UserRow userRow = new(user, _timeProvider);
-        await ValidateIfTheLoginAlreadyExistsAsync(user);
+        var awsBucketConfig = new AwsBucketConfig(_configuration);
+        var user = UserDomain(request, awsBucketConfig);
+        var userRow = new UserRow(user, _timeProvider);
+        await ValidateIfLoginAlreadyExistsAsync(user);
+        var id = await _userRepository.InsertAsync(userRow);
+        await _storageService.UploadPhotoAsync(awsBucketConfig, request.Photo.ToByteArray());
         return new()
         {
-            Id = await _userRepository.InsertAsync(userRow)
+            Id = id
         };
     }
 
-    private async Task ValidateIfTheLoginAlreadyExistsAsync(User user)
+    private User UserDomain(SignUpGrpcRequest request, AwsBucketConfig awsBucketConfig) =>
+        _userBuilder
+            .WithName(request.Name)
+            .WithLogin(request.Login)
+            .WithPassword(request.Password)
+            .WithPhotoUrl(awsBucketConfig.Uri.AbsoluteUri)
+            .Build();
+
+    private async Task ValidateIfLoginAlreadyExistsAsync(User user)
     {
         if (await _userRepository.FindUserByLoginAsync(user.Credential.Login) is not null)
         {

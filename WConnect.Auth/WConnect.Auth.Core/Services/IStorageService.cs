@@ -1,6 +1,8 @@
+using WConnect.Auth.Core.ApplicationsModels;
+
 namespace WConnect.Auth.Core.Services;
 
 public interface IStorageService
 {
-    Task<Uri> UploadPhotoAsync(byte[] file);
+    Task UploadPhotoAsync(AwsBucketConfig config, byte[] file);
 }

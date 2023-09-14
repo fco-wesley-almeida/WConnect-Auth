@@ -1,7 +1,9 @@
+using Microsoft.Extensions.Configuration;
 using Moq;
 using WConnect.Auth.Application;
 using WConnect.Auth.Application.Exceptions;
 using WConnect.Auth.Application.Services;
+using WConnect.Auth.Core.ApplicationsModels;
 using WConnect.Auth.Core.Builders;
 using WConnect.Auth.Core.DbModels;
 using WConnect.Auth.Core.Repositories;
@@ -18,7 +20,6 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
     private readonly SignUp.SignUpBase _sut;
     private readonly Mock<IUserRepository> _userRepositoryMock;
     private readonly Mock<IUserBuilder> _userBuilderMock;
-    private readonly Mock<IStorageService> _storageServiceMock;
     private readonly User _user;
     
     public SignUpServiceTests(UserFixture userFixture)
@@ -26,7 +27,7 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
         _user = userFixture.User;
         _userRepositoryMock = new();
         _userBuilderMock = new();
-        _storageServiceMock = new();
+        Mock<IStorageService> storageServiceMock = new();
         _userBuilderMock
             .Setup(x => x.WithName(It.IsAny<string>()))
             .Returns(_userBuilderMock.Object);
@@ -39,22 +40,34 @@ public class SignUpServiceTests: IClassFixture<UserFixture>
         _userBuilderMock
             .Setup(x => x.WithPhotoUrl(It.IsAny<string>()))
             .Returns(_userBuilderMock.Object);
-        _storageServiceMock
-            .Setup(x => x.UploadPhotoAsync(It.IsAny<byte[]>()))
-            .ReturnsAsync(new Uri(Faker.InternetFaker.Url()));
-            
+        storageServiceMock
+            .Setup(x => x.UploadPhotoAsync(
+                It.IsAny<AwsBucketConfig>(), 
+                It.IsAny<byte[]>()
+            ));
+        Mock<IConfiguration> configurationMock = new();
+        configurationMock
+            .SetupGet(x => x["Aws:AccessKey"])
+            .Returns("AccessKey");
+        configurationMock
+            .SetupGet(x => x["Aws:SecretKey"])
+            .Returns("SecretKey");
+        configurationMock
+            .SetupGet(x => x["Aws:BucketName"])
+            .Returns("BucketName");
         _sut = new SignUpService(
             userRepository: _userRepositoryMock.Object,
             userBuilder: _userBuilderMock.Object,
             timeProvider: new TimeFaker(DateTime.Now),
-            storageService: _storageServiceMock.Object
+            storageService: storageServiceMock.Object,
+            configurationMock.Object
         );
     }
 
     [Fact]
     public async Task SignUp_WhenUserBuildingFail_ShouldFail()
     {
-        ArgumentException exception = new ArgumentException();
+        var exception = new ArgumentException();
         _userBuilderMock
             .Setup(x => x.Build())
             .Throws(exception);

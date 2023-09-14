@@ -26,7 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="AWSSDK.S3" Version="3.7.203.7" />
         <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
         <PackageReference Include="Grpc.Tools" Version="2.57.0">
           <PrivateAssets>all</PrivateAssets>
@@ -41,6 +40,7 @@
 
     <ItemGroup>
       <Folder Include="Extensions\" />
+      <Folder Include="Models\" />
     </ItemGroup>
 
 </Project>
